@@ -1,4 +1,4 @@
-# Deployment Model CNN (Elephant vs Lion)
+# Deployment Model CNN (Pepaya vs Pandan)
 
 ## Deskripsi singkat
 
