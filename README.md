@@ -44,5 +44,5 @@ Agar dapat memprediksi pepaya atau pandan, data input model harus mengikuti form
 ## Akses melalui Website
 
 1. Anda akan diberikan URL untuk membuka website berupa `localhost:5000/` atau `127.0.0.1:5000/`.
-1. Buka URL dengan browser, coba masukkan gambar gajah atau singa yang ingin di prediksi.
-1. Anda akan diberikan prediksi bahwa pada gambar tersebut adalah gajah atau singa pada halaman website.
+1. Buka URL dengan browser, coba masukkan gambar pepaya atau pandan yang ingin di prediksi.
+1. Anda akan diberikan prediksi bahwa pada gambar tersebut adalah pepaya atau pandan pada halaman website.
