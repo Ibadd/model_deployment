@@ -5,7 +5,7 @@ import os
 import cv2
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = './static/uploads/'
+app.config['UPLOAD_FOLDER'] = 'static/uploads/'
 model = load_model('pandan_pepaya_class_model.h5')
 
 class_dict = {0: 'Pandan', 1: 'Pepaya'}
@@ -20,9 +20,9 @@ def predict_label(img_path):
     q_pred = model.predict(q)
     predicted_bit = q_pred * 10
     print(predicted_bit)
-    if(predicted_bit < 2):
+    if(predicted_bit < 1):
         predicted_bit = 0
-    if(predicted_bit > 2):
+    if(predicted_bit > 1):
         predicted_bit = 1
 
     return class_dict[predicted_bit]
