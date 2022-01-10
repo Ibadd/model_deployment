@@ -6,7 +6,7 @@ import cv2
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
-model = load_model('covidetect.h5')
+model = load_model('pandan_pepaya_class_model.h5')
 
 class_dict = {0: 'Covid', 1: 'Sehat'}
 
