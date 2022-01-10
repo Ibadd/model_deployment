@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-    <title>Pandanus vs Pepaya App</title>
+    <title>Covid Detection App</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                     bg-white
                     rounded-lg
                 ">
-            <h1 class="text-3xl text-bold">Pandan vs Papaya</h1>
+            <h1 class="text-3xl text-bold">Deteksi Covid</h1>
 
             {% if uploaded_image %}
             <img src="{{ url_for('send_uploaded_image', filename=uploaded_image) }}" class="mt-8 mb-4 h-48 border-8 border-gray-200 rounded-md" /> {% else %}
@@ -41,7 +41,7 @@
                         rounded-md
                     ">
                 <p class="text-center">
-                    Masukkan gambar pandan atau pepaya
+                    Masukkan gambar xray dada
                 </p>
             </div>
             {% endif %} {% if prediction %}
