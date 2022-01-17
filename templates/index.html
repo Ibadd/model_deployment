@@ -13,8 +13,8 @@
 </head>
 <style>
     body {
-  background-color: #07faee;
-}
+        background-color: #07faee;
+    }
 </style>
 
 <body>
@@ -31,30 +31,39 @@
         <div class="w3-display-left w3-text-white" style="padding:48px">
             <span class="w3-jumbo w3-hide-small" style="color:black">Covid Detection</span><br>
             <span class="w3-large" style="color:black">Deteksi Covid Melalui Gambar Xray Dada.</span>
-        <form method="post" enctype="multipart/form-data" class="flex flex-col" style="margin-top: 100px;">
-            <input type="file" name="image" style="color: black;" class="
+            <form method="post" enctype="multipart/form-data" class="flex flex-col" style="margin-top: 100px;">
+                <input type="file" name="image" style="color: black;" class="
                             mb-4
                             p-4
                             border-8 border-gray-200
                             rounded-md
                             bg-gray-100
                         " />
-            <button type="submit" class="p-4 bg-indigo-500 text-white rounded-md">
-                Prediksi Gambar
-            </button>
-        </form>
+                <button type="submit" class="p-4 bg-indigo-500 text-white rounded-md">
+                    Prediksi Gambar
+                </button>
+            </form>
         </div>
 
         {% if uploaded_image %}
-        <img src="{{ url_for('send_uploaded_image', filename=uploaded_image) }}"
-            class="mt-8 mb-4 h-48 border-8 border-gray-200 rounded-md" /> {% else %}
+        <img src="{{ url_for('send_uploaded_image', filename=uploaded_image) }}" 
+        class=" flex
+                justify-center
+                mt-8 
+                mb-4
+                my-8
+                w-72
+                h-56
+                items-center
+                border-8 border-gray-200
+                rounded-md" /> {% else %}
         <div class="
                         flex
                         justify-center
                         items-center
                         my-8
-                        w-2/4
-                        h-80
+                        w-72
+                        h-56
                         border-8 border-gray-200
                         rounded-md
                     ">
@@ -63,7 +72,7 @@
             </p>
         </div>
         {% endif %} {% if prediction %}
-        <p class="mb-8" >Hasil Prediksi: {{prediction}}</p>
+        <p class="mb-8">Hasil Prediksi: {{prediction}}</p>
         {% endif %}
 
 
