@@ -1,14 +1,14 @@
-# Deployment Model CNN (Pepaya vs Pandan)
+# Covid-19 Detection Using CNN
 
 ## Deskripsi singkat
 
-Repository ini berisi semua file yang dibutuhkan untuk melakukan deployment model Machine Learning Image Classification menggunakan CNN (Convolutional Neural Network). Adapun model yang digunakan merupakan model untuk memprediksi gambar pepaya dan pandan.
+Repository ini berisi semua file yang dibutuhkan untuk melakukan deployment model Machine Learning Image Classification menggunakan CNN (Convolutional Neural Network). Adapun model yang digunakan merupakan model untuk mendeteksi Covid-19 dengan gambar hasil Rontgen paru-paru.
 
 #
 
 ## Sekilas mengenai input model
 
-Agar dapat memprediksi pepaya atau pandan, data input model harus mengikuti format sebagai berikut:
+Agar dapat memprediksi Covid-19, data input model harus mengikuti format sebagai berikut:
 
 -   Gambar dengan format umum seperti .jpeg, .png, .webp, dsb.
 -   Gambar dikonversi ke dalam bentuk array/tensor
