@@ -11,22 +11,26 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <title>Covid Detection App</title>
 </head>
+<style>
+    body {
+  background-color: #07faee;
+}
+</style>
 
 <body>
     <main class="
                     flex flex-col
                     p-16
                     justify-center
-                    items-end
-                    bg-white
+                    items-center
+                    ml-96
                     rounded-lg
                 ">
-        <h1 class="text-3xl text-bold" style="text-align: center;">Deteksi Covid</h1>
         <div class="w3-display-left w3-text-white" style="padding:48px">
             <span class="w3-jumbo w3-hide-small" style="color:black">Covid Detection</span><br>
             <span class="w3-large" style="color:black">Deteksi Covid Melalui Gambar Xray Dada.</span>
         <form method="post" enctype="multipart/form-data" class="flex flex-col" style="margin-top: 100px;">
-            <input type="file" name="image" class="
+            <input type="file" name="image" style="color: black;" class="
                             mb-4
                             p-4
                             border-8 border-gray-200
@@ -47,8 +51,6 @@
                         justify-center
                         items-center
                         my-8
-                        mr-96
-                        -mt-32
                         w-480
                         h-48
                         border-8 border-gray-200
@@ -59,7 +61,7 @@
             </p>
         </div>
         {% endif %} {% if prediction %}
-        <p class="mb-8" style="margin-right: 370px;">Hasil Prediksi: {{prediction}}</p>
+        <p class="mb-8" >Hasil Prediksi: {{prediction}}</p>
         {% endif %}
 
 
