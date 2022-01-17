@@ -5,64 +5,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <title>Covid Detection App</title>
 </head>
 
 <body>
-    <section class="
-                flex
-                justify-center
-                items-center
-                w-screen
-                h-screen
-                bg-indigo-500
-            ">
-        <main class="
+    <main class="
                     flex flex-col
-                    justify-center
-                    items-center
                     p-16
+                    justify-center
+                    items-end
                     bg-white
                     rounded-lg
                 ">
-            <h1 class="text-3xl text-bold">Deteksi Covid</h1>
-
-            {% if uploaded_image %}
-            <img src="{{ url_for('send_uploaded_image', filename=uploaded_image) }}"
-                class="mt-8 mb-4 h-48 border-8 border-gray-200 rounded-md" /> {% else %}
-            <div class="
-                        flex
-                        justify-center
-                        items-center
-                        my-8
-                        w-48
-                        h-48
-                        border-8 border-gray-200
-                        rounded-md
-                    ">
-                <p class="text-center">
-                    Masukkan gambar xray dada
-                </p>
-            </div>
-            {% endif %} {% if prediction %}
-            <p class="mb-8">Hasil Prediksi: {{prediction}}</p>
-            {% endif %}
-
-            <form method="post" enctype="multipart/form-data" class="flex flex-col">
-                <input type="file" name="image" class="
+        <h1 class="text-3xl text-bold" style="text-align: center;">Deteksi Covid</h1>
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span class="w3-jumbo w3-hide-small" style="color:black">Covid Detection</span><br>
+            <span class="w3-large" style="color:black">Deteksi Covid Melalui Gambar Xray Dada.</span>
+        <form method="post" enctype="multipart/form-data" class="flex flex-col" style="margin-top: 100px;">
+            <input type="file" name="image" class="
                             mb-4
                             p-4
                             border-8 border-gray-200
                             rounded-md
                             bg-gray-100
                         " />
-                <button type="submit" class="p-4 bg-indigo-500 text-white rounded-md">
-                    Prediksi Gambar
-                </button>
-            </form>
-        </main>
-    </section>
+            <button type="submit" class="p-4 bg-indigo-500 text-white rounded-md">
+                Prediksi Gambar
+            </button>
+        </form>
+        </div>
+
+        {% if uploaded_image %}
+        <img src="{{ url_for('send_uploaded_image', filename=uploaded_image) }}"
+            class="mt-8 mb-4 h-48 border-8 border-gray-200 rounded-md" /> {% else %}
+        <div class="
+                        flex
+                        justify-center
+                        items-center
+                        my-8
+                        mr-96
+                        -mt-32
+                        w-480
+                        h-48
+                        border-8 border-gray-200
+                        rounded-md
+                    ">
+            <p class="text-center">
+                Masukkan gambar xray dada
+            </p>
+        </div>
+        {% endif %} {% if prediction %}
+        <p class="mb-8" style="margin-right: 370px;">Hasil Prediksi: {{prediction}}</p>
+        {% endif %}
+
+
+    </main>
     <footer class="flex gap-x-8 justify-center items-center h-32 bg-white">
         <img class="h-16" src="https://digitalent.kominfo.go.id/assets/@images/logo.png" alt="logo-dts" />
         <img class="h-16"
